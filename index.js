@@ -124,15 +124,18 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(weight,age){
-  if (weight < 6 && age > 0.99){
+  if (weight <= 5 && age >= 1){
     return weight * 0.05;
-  }else if(weight > 5 && weight < 11 && age > 1){
+  }else if(weight >= 6 && weight <= 10 && age >= 1){
       return weight * 0.04;
-  }else if(weight > 11 && weight < 16 && age > 1){
+  }else if(weight >= 11 && weight <= 15 && age >= 1){
     return weight * 0.03;
-  }else if(weight > 14 && age > 1){
+  }else if(weight > 15 && age >= 1){
     return weight * 0.02;
   /*add your code here*/
+  }
+  else if(age < 1 && age >= (2/12) && age <=(4/12)){
+    return weight * 0.10;
   }
 }
 console.log(hungryDog(15,1));
