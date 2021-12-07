@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+const { ifStatement } = require("@babel/types");
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 // task 1a, 1b, and 1c are not autograded
@@ -19,7 +21,11 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = 27;
+if(votingAge > 18){
+  console.log('true');
+}
+console.log(votingAge);
 
 
 /*
@@ -32,8 +38,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let var1 = 25;
+let var2 = 35;
+if(var2 > var1){
+  var1 = var2;
+}
+console.log(var1);
 
 
 
@@ -47,6 +57,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year = '1999';
+parseInt(year);
+console.log(year);
 
 
 
@@ -60,10 +73,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
-
+console.log(multiply(5,5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +89,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
+  return age*7;
   /*add your code here*/
 }
-
+console.log(dogYears(8));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,9 +123,19 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight,age){
+  if (weight < 6 && age > 0.99){
+    return weight * 0.05;
+  }else if(weight > 5 && weight < 11 && age > 1){
+      return weight * 0.04;
+  }else if(weight > 11 && weight < 16 && age > 1){
+    return weight * 0.03;
+  }else if(weight > 14 && age > 1){
+    return weight * 0.02;
   /*add your code here*/
+  }
 }
+console.log(hungryDog(15,1));
 
 
 
