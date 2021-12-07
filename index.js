@@ -137,15 +137,18 @@ function hungryDog(weight,age){
     return weight * 0.02;
     //> 15lbs - 2% of their body weight 
   }
-  else if(age < 1 && age >= (.166) && age <=(.333)){
+
+  //Puppies less than 1 year
+
+  else if(age >= .166 && age <=.333){
     return weight * 0.10;
     //2 - 4 months 10% of their body weight
   }
-  else if(age < 1 && age >= (.416) && age <=(.583)){
+  else if(age >= .416 && age <=.583){
     return weight * 0.05;
     //4 - 7 months 5% of their body weight 
   }
-  else if(age < 1 && age >= (.666) && age <=(.99)){
+  else if(age >= .666 && age < 1){
     return weight * 0.04;
     //7 - 12 months 4% of their body weight
   }
@@ -176,11 +179,11 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.floor(Math.random() * 3);
 function game(user, computer){
   /*add your code here*/
 }
-
+console.log(computer);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -190,7 +193,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
