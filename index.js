@@ -139,21 +139,17 @@ function hungryDog(weight,age){
   }
 
   //Puppies less than 1 year
-
-  else if(age >= .166 && age <=.333){
-    return weight * 0.10;
-    //2 - 4 months 10% of their body weight
-  }
-  else if(age >= .416 && age <=.583){
-    return weight * 0.05;
-    //4 - 7 months 5% of their body weight 
-  }
-  else if(age >= .666 && age < 1){
-    return weight * 0.04;
-    //7 - 12 months 4% of their body weight
+  else if(age < 1 && age >= 0.583){
+    return weight*0.04;
+  }else if(age > 0.583 && age >=0.333){
+    return weight*0.05;
+  }else if(age < 0.333){
+    return weight*0.10;
+  }else{
+    return 'error';
   }
 }
-console.log(hungryDog(10,.8));
+console.log(hungryDog(4,0.583));
 
 
 
